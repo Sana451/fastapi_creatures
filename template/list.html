@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<style>
+    table, th, td {
+      border:1px solid black;
+    }
+</style>
+
+<body>
+
+<h2>Creatures</h2>
+
+<table style="width:100%">
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Country</th>
+        <th>Area</th>
+        <th>AKA</th>
+    </tr>
+    <tr>
+    </tr>
+    {% for creature in creatures: %}
+    <tr>
+        <td>{{ creature.name }}</td>
+        <td>{{ creature.description }}</td>
+        <td>{{ creature.country }}</td>
+        <td>{{ creature.area }}</td>
+        <td>{{ creature.aka }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+<h2>Explorers</h2>
+
+<table style="width:100%">
+    <tr>
+        <th>Name</th>
+        <th>Country</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+    </tr>
+    {% for explorer in explorers: %}
+    <tr>
+        <td>{{ explorer.name }}</td>
+        <td>{{ explorer.country }}</td>
+        <td>{{ explorer.description }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+
+</html>
